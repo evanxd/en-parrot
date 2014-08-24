@@ -1,0 +1,19 @@
+{
+  "name": "en-parrot",
+  "version": "0.0.1",
+  "homepage": "https://github.com/evanxd/en-parrot",
+  "authors": [
+    "Evan Xd <itoyxd@gmail.com>"
+  ],
+  "description": "A learning English app.",
+  "main": "index.html",
+  "keywords": [
+    "english"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "2.1.1",
+    "requirejs": "2.1.14",
+    "youtube-player": "0.0.3"
+  }
+}

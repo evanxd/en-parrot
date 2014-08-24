@@ -11,13 +11,14 @@ require(['subtitle'], function(Subtitle) {
   var input = document.querySelector('#input');
   var stage = document.querySelector('#stage');
   var captions = document.querySelector('#captions');
-  var captionId = 0;
+  var captionId;
   var videoId = '23Uuehgmd14';
   var subtitle;
 
   player.onready = function() {
     subtitle = new Subtitle(videoId);
     subtitle.onload = function() {
+      init();
       playPartialVideo(captionId);
     };
   };
@@ -33,7 +34,6 @@ require(['subtitle'], function(Subtitle) {
   };
 
   play.addEventListener('click', function() {
-    stage.innerHTML = captionId;
     playPartialVideo(captionId);
   });
 
@@ -47,8 +47,18 @@ require(['subtitle'], function(Subtitle) {
       e.target.value = '';
       // Go to next stage.
       captionId++;
+      stage.innerHTML = captionId;
+      localStorage.setItem(videoId, captionId);
     }
   });
+
+  function init() {
+    captionId = Number(localStorage.getItem(videoId)) || 0;
+    stage.innerHTML = captionId;
+    for (var i = 0; i < captionId; i++) {
+      captions.innerHTML += subtitle.caption(i).content + '<br>';
+    }
+  }
 
   function playPartialVideo(captionId) {
     var caption = subtitle.caption(captionId);

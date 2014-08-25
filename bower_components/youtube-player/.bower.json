@@ -1,0 +1,27 @@
+{
+  "name": "youtube-player",
+  "version": "0.0.3",
+  "homepage": "https://github.com/evanxd/youtube-player",
+  "authors": [
+    "Evan Xd <itoyxd@gmail.com>"
+  ],
+  "description": "A youtube player web component.",
+  "main": "youtube-player.html",
+  "keywords": [
+    "web-component",
+    "youtube"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "polymer-platform": "0.3.5"
+  },
+  "_release": "0.0.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.3",
+    "commit": "81094c4d702909daba1390e1095c483fe6c6ec0c"
+  },
+  "_source": "git://github.com/evanxd/youtube-player.git",
+  "_target": "0.0.3",
+  "_originalSource": "youtube-player"
+}

@@ -42,7 +42,7 @@ require(['subtitle'], function(Subtitle) {
 
     if (e.target.value.toLowerCase() ===
         // Don't need to compare with punctuation marks.
-        content.toLowerCase().replace(',', '').replace('!', '').replace('.', '')) {
+        content.toLowerCase().replace(/,/g, '').replace(/!/g, '').replace(/\./g, '')) {
       captions.innerHTML += content + '<br>';
       e.target.value = '';
       // Go to next stage.
